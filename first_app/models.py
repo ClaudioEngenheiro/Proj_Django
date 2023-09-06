@@ -24,10 +24,11 @@ class RegistroAcesso(models.Model):
     def __str__(self):
         return str(self.date)    
 
-#class Produto(models.Model):
-    #name = models.ForeignKey(max_length=256)
-    #date = models.DateField(decimal_places=2, max_digits=9)
+class Produto(models.Model):
+    nome = models.CharField(max_length=256)
+    data_venc = models.DateField()
+    fornecedor = models.CharField(max_length=50)
 
-    #def __str__(self):
-        #return str(self.name)
+    def __str__(self):
+        return str(self.name)
     
