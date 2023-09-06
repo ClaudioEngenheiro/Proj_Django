@@ -1,6 +1,7 @@
 from django import forms
 from django.shortcuts import render
 from django.core import exceptions, validators
+from .models import Produto
 
 
 class FormProduto(forms.Form):
@@ -20,7 +21,7 @@ class FormCliente(forms.Form):
     codigo = forms.IntegerField()
 
 
-class Produto(Form.ModelForm):
+class ProdutoForm(forms.ModelForm):
     class Meta:
-        model = MyModels
-        fields = "_all_",
+        model = Produto
+        fields = "__all__"

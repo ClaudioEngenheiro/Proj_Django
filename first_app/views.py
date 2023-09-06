@@ -22,12 +22,12 @@ def form_Produto_view(request):
 
 
 def users(request):
-    form = Produto()
+    form = forms.ProdutoForm()
 
     if request.method == "POST":
-        form = Produto(request.POST)
+        form = forms.Produto(request.POST)
         if form.is_valid():
-            form.save(comit=true)
+            form.save(commit=True)
             return index(request)
         else:
             print("Erro Formulário Inválido")
