@@ -20,6 +20,16 @@ def form_Produto_view(request):
             print ("Cor" +form.cleaned_data['cor'])
     return render(request, 'forms_simples.html', {'form':form})
 
+def cadastro_produto(request):
+    form = forms.ProdutoForm()
+    if request.method == 'POST':
+        form = forms.ProdutoForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print("Erro ao Gravar")
+    
+    return render(request, 'forms_simples.html', {'form':form})
 
 def users(request):
     form = forms.ProdutoForm()

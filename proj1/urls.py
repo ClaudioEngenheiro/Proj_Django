@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.index,name="index"),
     path("Calculadora", views.calculadora,name="calculadora"),
-    path("forms_simples", views.form_Produto_view,name="formsimples")
+    path("forms_simples", views.form_Produto_view,name="formsimples"),
+    path("produtoform", views.cadastro_produto,name="formproduto")
 ]
